@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure P2P Messenger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Secure P2P Messenger</h1>
+            <p>Direct encrypted messaging - no servers, no logs</p>
+        </div>
+        
+        <div class="warning">
+            ⚠️ Both users must be online simultaneously. Messages are not stored anywhere.
+        </div>
+        
+        <div class="status disconnected" id="status">
+            Disconnected - Share your ID to start chatting
+        </div>
+        
+        <div class="your-id">
+            <strong>Your ID:</strong> <span id="yourId">Generating...</span>
+        </div>
+        
+        <div class="connection-controls">
+            <input type="text" id="remoteId" placeholder="Enter friend's ID to connect">
+            <button onclick="connectToPeer()" id="connectBtn">Connect</button>
+        </div>
+        
+        <div class="chat-area" id="chatArea"></div>
+        
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+            <button onclick="sendMessage()" id="sendBtn" disabled>Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
